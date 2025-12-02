@@ -1,0 +1,1970 @@
+/* --------------------------------------- */
+
+/* ----- Basic Setup ----- */
+
+/* --------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* BUTTONS WHATSAPP AND PHONE */
+
+.whatsapps {
+  position: fixed;
+  bottom: 20px; /* Decrease this value to move it further down */
+  right: 20px;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.phones {
+  position: fixed;
+  bottom: 20px; /* Match this with WhatsApp's `bottom` value */
+  left: 17px;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.whatsapps img,
+.phones img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow */
+}
+
+/* row */
+
+:root {
+  --container-max-width: 1340px;
+  --gutter-medium: 3rem;
+  --gutter-small-1: 2.5rem;
+}
+
+.row {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+@media (max-width: 1240px) {
+  .row {
+    padding: 0 var(--gutter-medium);
+  }
+}
+
+@media (max-width: 900px) {
+  .row {
+    padding: 0 var(--gutter-medium);
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+.text_h2 {
+  font-weight: 800;
+}
+
+/*  body  */
+
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  object-fit: contain;
+}
+
+/* header */
+
+header {
+  margin-bottom: 3rem;
+}
+
+/* nav */
+
+.bismillah {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bismillah img {
+  max-width: 10rem;
+}
+
+.nav_main {
+  padding-left: 2rem;
+  padding-right: 4rem;
+  margin-bottom: 1rem;
+}
+
+.nav_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 0 1rem;
+}
+
+.logo img {
+  max-width: 15rem;
+}
+
+.logo .logo1 {
+  max-width: 8rem;
+}
+
+.client img {
+  max-width: 17rem;
+}
+
+.contact {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact_div {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact_div img {
+  height: 40px;
+  border-radius: 9px;
+}
+
+.contact_div_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_div_text span {
+  color: gray;
+}
+
+.contact_div_text a {
+  text-decoration: none;
+  color: #00da5f;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* nav link */
+
+.mobile_nav,
+.nav_links {
+  background-color: #015e29;
+  padding: 0.5rem;
+  border-bottom: 1px solid gray;
+}
+
+.mobile_nav_link {
+  transition: all 0.3s;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mobile_nav_link a,
+.nav_link a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.mobile_dropdown,
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 300px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.mobile_dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 300px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  top: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.mobile_dropdown-content a,
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.mobile_dropdown-content a:hover,
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.mobile_dropdown:hover .mobile_dropdown-content,
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* mobile nav bar */
+
+.mobile_nav {
+  display: none;
+}
+
+.hamburger {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.num {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.hamburger button {
+  float: right;
+  border: none;
+  border-radius: 5px;
+}
+
+.hamburger button i {
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #015e29;
+  padding: 0.7rem;
+}
+
+.mobile_nav_link {
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  display: none;
+}
+
+/* home */
+
+/* Review Section */
+
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.reviews img {
+  cursor: pointer;
+}
+
+/* packages */
+
+.packages h2 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.package_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.package_card {
+  width: 100%;
+  max-width: 26rem;
+  background-color: #fbfbfb;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.package_card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.package_card_body {
+  padding: 1rem 1.5rem;
+}
+
+.package_card_body h3 {
+  text-align: center;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: #015e29;
+}
+
+.package_card_body h4 {
+  text-align: center;
+  font-size: clamp(1.2rem, 2.8vw, 1.4rem);
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.city,
+.hotel {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.flex i {
+  color: #015e29;
+  font-size: 1rem;
+}
+
+.star {
+  display: flex;
+}
+
+.star i {
+  color: #ffb700;
+  font-size: 1rem;
+}
+
+.price {
+  background-color: #015e29;
+  color: #ffffff;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.price p {
+  font-size: 2rem;
+}
+
+.book_now p {
+  font-size: 0.9rem;
+}
+
+.btns {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btns .btn {
+  padding: 0.5rem 3rem;
+  color: #fff;
+  background-color: #015e29;
+  text-align: center;
+}
+
+.btns .btn_black {
+  background-color: #000;
+  padding: 0.5rem 3.3rem;
+}
+
+/* Introduction */
+
+.Introduction h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.Introduction h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #015e29;
+  margin-bottom: 3rem;
+}
+
+.Introduction h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Introduction h5 {
+  color: #015e29;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.intro_text {
+  margin-bottom: 1.3rem;
+}
+
+.intro_text p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+
+.testimonials h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials_cards {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial_card {
+  background-color: #f6f6f6;
+  padding: 2rem;
+  border-radius: 11px;
+}
+
+.testimonial_card .star {
+  gap: 1rem;
+}
+
+.testimonial_card .star i {
+  color: orange;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+/* Trust */
+
+.Trust {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.change {
+  display: none;
+}
+
+/* Form Section */
+
+.form_container {
+  padding: 3rem 3rem;
+  background-image: url("../images/form/bg-2.png");
+  background-color: #015e29;
+  color: #ffffff;
+  border-radius: 11px;
+}
+
+.form_container h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.form_container p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form_info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form_flex label {
+  font-weight: 600;
+}
+
+.form_info input {
+  height: 0.5rem;
+  width: 10rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: none;
+  border: none;
+  outline: none;
+  color: #000;
+}
+
+.form_info input::placeholder {
+  color: #000;
+}
+
+.form_info button {
+  margin-top: 2.1rem;
+  background-color: black;
+  padding: 0.8rem 3rem;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s;
+  border: none;
+}
+
+.form_info button:hover {
+  background-color: rgb(54, 53, 53);
+}
+
+/* Footer */
+
+footer {
+  background-color: #f6f6f6;
+}
+
+footer .row {
+  padding: 0;
+}
+
+.footer_main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.about_footer h2,
+.links h2,
+.contact_links h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.about_footer .p {
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.links_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.links_list a {
+  text-decoration: none;
+  color: #191919;
+  transition: all 0.3s;
+}
+
+.links_list a:hover {
+  color: #004d00;
+}
+
+.contact_link {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact_group {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  max-width: 15rem;
+}
+
+.contact_group_none {
+  display: flex;
+  gap: 1rem;
+  max-width: 15rem;
+}
+
+.contact_group_none i,
+.contact_group i {
+  margin-top: 0.3rem;
+  font-size: 1.3rem;
+  color: #004d00;
+}
+
+.contact_group a {
+  text-decoration: none;
+  color: #191919;
+}
+
+.note {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.social_bar {
+  background-color: #004d00;
+  padding: 0.6rem;
+  color: #fff;
+}
+
+.flexibility {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexibility p {
+  margin-top: 1rem;
+}
+
+.social_links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social_links a i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.social_links a {
+  text-decoration: none;
+}
+
+.package_card_body a {
+  text-decoration: none;
+}
+
+.price-options a {
+  text-decoration: none;
+}
+
+.footer_icons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer_icons img {
+  max-width: 12rem;
+}
+
+/* contact section */
+
+.contact-section {
+  background-color: #005d20;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+}
+
+.contact-icon {
+  margin-top: 0.5rem;
+  background-color: white;
+  color: #005d20;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.contact-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contact-value {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+/* Umrah page */
+
+.register_form_umrah {
+  display: flex;
+  padding-top: 4rem;
+  gap: 3rem;
+}
+
+.register_form {
+  width: 25rem;
+  background-color: #f6f6f6;
+  border-radius: 11px;
+  padding: 2rem;
+}
+
+.register_form h2 {
+  color: #015e29;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  outline: #878484;
+  border-radius: 5px;
+}
+
+.register button {
+  color: #fff;
+  background-color: #015e29;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.register_form p {
+  color: #191919;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.register_img img {
+  max-width: 50rem;
+  border-radius: 9px;
+}
+
+.Introduction .bottom {
+  padding-bottom: 2rem;
+}
+
+.Umrah_ssction h2 {
+  font-size: 3rem;
+  color: #015e29;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.Umrah_ssction p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.umrah_cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  background: #004d00;
+  color: white;
+  padding: 12px;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0 15px;
+  padding-top: 5px;
+  text-align: left;
+}
+
+.card ul li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.card ul li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.price-options {
+  padding: 0px 10px;
+}
+
+.price-options div {
+  background: #292828;
+  color: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.buttons a {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.call-btn {
+  background: #008000;
+}
+
+.book-btn {
+  background: #004d00;
+}
+
+.contact-value {
+  font-weight: 800;
+}
+
+/* about  */
+
+.about {
+  padding: 3rem 0;
+}
+
+.about .intro_text h5 {
+  color: #004d00;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.top {
+  padding-top: 8rem;
+}
+
+/* Contact Page */
+
+.contact_form {
+  display: flex;
+  padding: 2rem 0;
+  gap: 4rem;
+}
+
+.contact_form_data h2 {
+  font-size: 2.6rem;
+  color: #004d00;
+  margin-bottom: 1.3rem;
+}
+
+.contact_form_data p {
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.location {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.location i {
+  color: #fff;
+  background-color: #004d00;
+  padding: 1rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-top: -2.5rem;
+  font-size: 1.2rem;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.location h3 {
+  color: #004d00;
+}
+
+.location_data p {
+  color: #000;
+}
+
+.contact_form_form {
+  width: 70rem;
+  background-color: #f6f6f6;
+  padding: 3rem 2rem;
+  border-radius: 11px;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact_form_form input {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: #878484;
+}
+
+.contact_form_form textarea {
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: #878484;
+}
+
+.contact_form_form button {
+  background-color: #004d00;
+  padding: 0.8rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+}
+
+.map-containers iframe {
+  height: 200px;
+}
+
+.map-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 11px;
+}
+
+.f_text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.7rem;
+}
+
+/* Beat My Price Page Styling */
+.beat_price {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url("../images/Package_Cards/3start1.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.beat {
+  width: 100%;
+  max-width: 1250px;
+}
+
+.beat h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.beat_container {
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  border-radius: 11px;
+  color: #fff;
+}
+
+.form_beat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.groups {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+
+.form_beat input,
+.form_beat textarea,
+.form_beat select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+  color: #878484;
+}
+
+.beat_btn {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.beat_btn button {
+  background-color: #004d00;
+  padding: 0.75rem 4rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ---------- RESPONSIVE MEDIA QUERIES ---------- */
+
+@media (max-width: 1024px) {
+  .form_beat {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .groups {
+    flex: 1 1 45%;
+  }
+
+  .beat h2 {
+    font-size: 2rem;
+  }
+
+  .beat_btn button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .groups {
+    flex: 1 1 100%;
+  }
+
+  .beat h2 {
+    font-size: 1.8rem;
+  }
+
+  .beat_price {
+    padding: 1rem;
+  }
+
+  .form_beat {
+    flex-direction: column;
+  }
+
+  .beat_btn button {
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+  }
+
+  .contact-value {
+    .contact-value {
+      font-weight: 900;
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+  }
+
+  .contact-title {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .contact-section {
+    padding: 10px;
+  }
+
+  .logo .logo1 {
+    max-width: 6rem;
+  }
+}
+
+/* Place Section */
+
+.trip_places h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.trip_places p {
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.trip_cards_one {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.trip_card {
+  width: 25rem;
+  height: 20rem;
+  border-radius: 6px;
+}
+
+.card_texts {
+  padding: 3rem;
+  padding-top: 4rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_texts p {
+  font-size: 1.2rem;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.card_texts h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card_texts a {
+  background-color: #000;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.card_texts a:hover {
+  background-color: #191919;
+}
+
+.one {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../images/place/egypt.avif");
+  background-repeat: no-repeat;
+}
+
+.two {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../images/place/dubai.avif");
+  background-repeat: no-repeat;
+}
+
+.three {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../images/place/turkey.avif");
+  background-repeat: no-repeat;
+}
+
+/* subscribe */
+
+.subscribe {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("../images/Package_Cards/3start3.jpg");
+  height: 40vh;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subscribe h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe p {
+  margin-bottom: 1.5rem;
+}
+
+.sub_inp {
+  display: flex;
+  justify-content: center;
+}
+
+.sub_inp input {
+  padding: 0.8rem;
+}
+
+.sub_inp a {
+  background-color: #004d00;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem 3rem;
+  text-decoration: none;
+}
+
+.h44 {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #015e29;
+  padding-bottom: 1rem;
+}
+
+.footer_images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer_images img {
+  max-width: 15rem;
+}
+
+/* 2026 ramdan page */
+
+.text_h2 {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.text_div p {
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.tops {
+  margin-top: 3rem;
+}
+
+/* Responsive website */
+
+@media (max-width: 1300px) {
+  .register_img img {
+    max-width: 38rem;
+  }
+
+  .beat_container {
+    height: 100%;
+  }
+
+  .form_beat input,
+  .form_beat textarea,
+  .form_beat select {
+    width: 17rem;
+  }
+  .form_beat input,
+  .form_beat textarea,
+  .form_beat select {
+    width: 17rem;
+  }
+}
+
+@media (max-width: 1270px) {
+  .trip_places h2 {
+    font-size: 2.5rem;
+  }
+
+  .Trust img {
+    width: 60rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* .row {
+    padding: 0 3rem;
+  } */
+
+  .register_form_umrah {
+    gap: 1rem;
+  }
+}
+
+/* 1100 */
+
+@media (max-width: 1140px) {
+  .client img {
+    max-width: 11rem;
+  }
+
+  .form_info button {
+    padding: 0.8rem 0;
+    width: 10.5rem;
+  }
+}
+
+@media (max-width: 1110px) {
+  .Umrah_ssction h2 {
+    font-size: 2rem;
+  }
+
+  .Umrah_ssction p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .register_form {
+    width: 19rem;
+  }
+
+  .register_img img {
+    max-width: 32rem;
+  }
+}
+
+/* 1000px */
+
+@media (max-width: 1072px) {
+  .testimonials_cards {
+    flex-direction: column;
+  }
+
+  .testimonial_card {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 1040px) {
+  .Trust .no {
+    display: none;
+  }
+
+  .Trust .change {
+    display: block;
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .trust,
+  .client {
+    display: none;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav_main {
+    padding-left: 0rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav_link a {
+    font-size: 1rem;
+  }
+
+  .sub_text h2 {
+    font-size: 2rem;
+  }
+
+  .sub_text p {
+    font-size: 0.9rem;
+  }
+
+  .footer_main {
+    gap: 2rem;
+  }
+
+  .trip_places h2 {
+    font-size: 2.1rem;
+  }
+
+  .trip_places p {
+    font-size: 0.9rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .Introduction h2 {
+    font-size: 2rem;
+  }
+
+  .contact_form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact_form_form {
+    width: 97%;
+  }
+}
+
+/* 900 */
+
+@media (max-width: 970px) {
+  .register_img img {
+    display: none;
+  }
+
+  .register_form {
+    width: 100%;
+  }
+
+  .footer_icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .footer_icons img {
+    max-width: 8rem;
+  }
+
+  .flex_col {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media (max-width: 900px) {
+  .reviews img {
+    max-width: 10rem;
+  }
+}
+
+/* 800px */
+
+@media (max-width: 850px) {
+  .contact {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .mobile_nav {
+    display: block;
+  }
+
+  .bismillah img {
+    max-width: 7rem;
+  }
+
+  .nav_links {
+    display: none;
+  }
+
+  .reviews {
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .Introduction h2 {
+    font-size: 2.5rem;
+  }
+
+  .Introduction h3 {
+    font-size: 2rem;
+  }
+
+  .testimonial_card {
+    width: auto;
+  }
+
+  .contact_div_text {
+    display: none;
+  }
+}
+
+/* 700 */
+
+@media (max-width: 760px) {
+  .form_beat input,
+  .form_beat textarea,
+  .form_beat select {
+    width: 100%;
+  }
+
+  .text_h2 {
+    font-size: 1.5rem;
+  }
+
+  .text_div p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .form_container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .form_container p {
+    font-size: 0.9rem;
+  }
+
+  .flexibility {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .testimonial_card {
+    width: 25rem;
+    /* height: 24rem; */
+  }
+}
+
+/* 600 */
+
+@media (max-width: 670px) {
+  .sub_text p br {
+    display: none;
+  }
+
+  .sub_text input {
+    width: 15rem;
+  }
+
+  .Introduction h4 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .Introduction h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .Introduction h2 {
+    font-size: 2rem;
+  }
+
+  .Introduction h3 {
+    font-size: 1.6rem;
+  }
+
+  .Introduction p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 500 */
+
+@media (max-width: 540px) {
+  .sub_text h2 {
+    font-size: 1.8rem;
+  }
+
+  .sub_inp input {
+    width: 13rem;
+    font-size: 0.9rem;
+  }
+
+  .sub_inp button {
+    padding: 1rem;
+  }
+
+  .subscribe {
+    padding: 1rem;
+  }
+
+  .testimonial_card {
+    width: auto;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .Trust .change {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .register_form {
+    width: 100%;
+  }
+
+  footer .row {
+    padding: 0 1rem;
+  }
+
+  .flexibility p {
+    text-align: center;
+  }
+
+  .subscribe {
+    height: 50vh;
+  }
+
+  .logo img {
+    max-width: 10rem;
+  }
+}
+
+/* 400 */
+
+@media (max-width: 490px) {
+  .city,
+  .hotel {
+    font-size: 0.8rem;
+  }
+
+  .btns .btn {
+    padding: 0.5rem 2.3rem;
+  }
+
+  .trip_places h2 {
+    font-size: 1.7rem;
+  }
+
+  .register_form h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    width: 358px;
+  }
+
+  .contact_form_form {
+    width: 100%;
+  }
+
+  .contact_form_data p {
+    font-size: 0.9rem;
+  }
+
+  .location {
+    gap: 1rem;
+  }
+
+  .location h3 {
+    font-size: 1.1rem;
+  }
+
+  .location i {
+    margin-top: -3.5rem;
+  }
+
+  .location i {
+    font-size: 1rem;
+  }
+
+  .contact-value {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 470px) {
+  .form_beat input,
+  .form_beat textarea,
+  .form_beat select {
+    width: 90%;
+  }
+
+  .sub_inp input {
+    width: 10rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .form_container {
+    padding: 3rem 1rem;
+  }
+
+  .form_container h2 {
+    font-size: 1.7rem;
+  }
+
+  .form_container p {
+    font-size: 0.9rem;
+  }
+
+  .form_info input {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .city i {
+    display: none;
+  }
+
+  .testimonials h2 {
+    font-size: 2.2rem;
+  }
+
+  .testimonial_card {
+    width: auto;
+    text-align: center;
+  }
+
+  .testimonial_card .star {
+    justify-content: center;
+    margin-top: 0rem;
+  }
+
+  .about_footer .p br {
+    display: none;
+  }
+
+  .about_footer .p {
+    font-size: 0.8rem;
+  }
+
+  .about_footer h2,
+  .links h2,
+  .contact_links h2 {
+    font-size: 1.3rem;
+  }
+
+  .links_list a {
+    font-size: 0.9rem;
+  }
+
+  .contact_group a {
+    font-size: 0.9rem;
+  }
+
+  .reviews img {
+    max-width: 7rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .btns .btn {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .btm {
+    padding-top: -2rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card ul li {
+    font-size: 0.9rem;
+  }
+
+  .price-options div {
+    font-size: 0.8rem;
+  }
+
+  .form_beat input,
+  .form_beat textarea,
+  .form_beat select {
+    width: 80%;
+  }
+
+  .Trust .change {
+    width: 23rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact_div img {
+    height: 35px;
+  }
+
+  .mobile_nav_link a {
+    font-size: 1.1rem;
+  }
+
+  .mobile_dropdown-content a {
+    font-size: 0.8rem;
+  }
+
+  .register_form {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .register_form h2 {
+    font-size: 1.4rem;
+  }
+
+  .register_form p {
+    font-size: 0.8rem;
+  }
+
+  .register input {
+    font-size: 0.8rem;
+  }
+
+  .register button {
+    font-size: 1rem;
+  }
+
+  .text_h2 {
+    font-size: 1.3rem;
+  }
+
+  .Trust .change {
+    width: 20rem;
+  }
+}
+
+/* 300 */
+
+@media (max-width: 380px) {
+  .sub_inp a {
+    padding: 1rem 0.6rem;
+  }
+
+  .testimonial_card {
+    width: 21rem;
+    text-align: center;
+    height: 34rem;
+  }
+
+  .Introduction h5 {
+    font-size: 1.3rem;
+  }
+
+  .trip_card {
+    width: 25rem;
+    height: 14rem;
+  }
+
+  .card_texts h4 {
+    font-size: 1.5rem;
+  }
+
+  .card_texts {
+    padding: 2rem;
+  }
+
+  .logo img {
+    max-width: 8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .btns .btn {
+    width: 40rem;
+  }
+}
